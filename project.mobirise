@@ -60,7 +60,7 @@
     "siteUrl": false,
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 6,
+    "uniqCompNum": 8,
     "versionPublish": "5.9.11",
     "screenshot": "screenshot.png"
   },
@@ -1180,22 +1180,209 @@
           "_params": {}
         },
         {
-          "alias": "eb-instagram-feed",
-          "_isSecondary": true,
-          "_styles": {},
-          "_name": "eb-instagram-feed",
-          "_sourceTheme": "impressm5",
-          "_customHTML": "<section class=\"elb-widgets\" group=\"Widget\"><script src=\"https://s.electricblaze.com/widget.js\" defer=\"\"></script>\n<div class=\"electricblaze-id-2UhxBF1\"></div></section>",
-          "_cid": "u0i8wMap7i",
-          "_anchor": "eb-instagram-feed-0",
-          "safe": {
-            "id": 22375,
-            "code": "<script src=\"https://s.electricblaze.com/widget.js\" defer></script>\n<div class=\"electricblaze-id-2UhxBF1\"></div>"
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            "h2, h3, h4, h5, p": {
+              "margin": "0"
+            },
+            ".inner-container": {
+              "margin-right": "-32px"
+            },
+            ".content": {
+              "width": "100%",
+              "padding-left": "~\"calc((100% - 1300px) / 2)\"",
+              "@media (max-width: 1440px)": {
+                "padding-left": "~\"calc((100% - 1100px) / 2)\""
+              },
+              "@media (max-width: 1200px)": {
+                "padding-left": "~\"calc((100% - 920px) / 2)\""
+              },
+              "@media (max-width: 1024px)": {
+                "padding-left": "~\"calc((100% - 768px) / 2)\""
+              },
+              "@media (max-width: 800px)": {
+                "width": "100%",
+                "padding-left": "7%"
+              },
+              "@media (max-width: 480px)": {
+                "padding-left": "0"
+              }
+            },
+            ".text-wrap": {
+              "position": "relative",
+              "width": "18.6%",
+              "padding-right": "30px",
+              "@media (max-width: 1599px)": {
+                "width": "25%"
+              },
+              "@media (max-width: 1024px)": {
+                "padding-right": "24px"
+              },
+              "@media (max-width: 768px)": {
+                "width": "38%"
+              },
+              "@media (max-width: 680px)": {
+                "width": "100%"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#6b6b6b"
+            },
+            ".controls": {
+              "margin-top": "45px"
+            },
+            ".embla": {
+              "position": "relative",
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "align-items": "center",
+              "width": "100%"
+            },
+            ".embla__viewport": {
+              "overflow": "hidden",
+              "width": "81.4%",
+              "@media (max-width: 1599px)": {
+                "width": "75%"
+              },
+              "@media (max-width: 680px)": {
+                "width": "100%"
+              }
+            },
+            ".embla__viewport.is-draggable": {
+              "cursor": "grab"
+            },
+            ".embla__viewport.is-dragging": {
+              "cursor": "grabbing"
+            },
+            ".embla__container": {
+              "display": "flex",
+              "user-select": "none",
+              "-webkit-touch-callout": "none",
+              "-khtml-user-select": "none",
+              "-webkit-tap-highlight-color": "transparent",
+              "position": "relative",
+              "width": "81.4%",
+              "@media (max-width: 1599px)": {
+                "width": "75%"
+              },
+              "@media (max-width: 680px)": {
+                "width": "100%",
+                "margin-top": "30px"
+              }
+            },
+            ".embla__slide": {
+              "position": "relative",
+              "margin-right": "30px"
+            },
+            ".card-wrap": {
+              "width": "345.75px",
+              "@media (max-width: 680px)": {
+                "width": "296px"
+              }
+            },
+            ".image-wrap": {
+              "width": "100%",
+              "overflow": "hidden",
+              "img": {
+                "max-width": "100%",
+                "height": "auto",
+                "object-fit": "cover"
+              }
+            },
+            ".content-wrap": {
+              "margin-top": "20px"
+            },
+            ".mbr-card-title": {
+              "margin-bottom": "6px",
+              "color": "#000000"
+            },
+            ".mbr-card-subtitle": {
+              "margin-bottom": "2px",
+              "color": "#6b6b6b"
+            },
+            ".mbr-card-text": {
+              "color": "#6b6b6b",
+              "& when not (@showCardTitle)": {
+                "margin-top": "6px"
+              }
+            },
+            ".embla__button--next svg polygon, .embla__button--prev svg polygon": {
+              "transition": "0.5s cubic-bezier(0.22, 0.61, 0.36, 1)"
+            },
+            ".embla__button--next svg, .embla__button--prev svg": {
+              "overflow": "hidden"
+            },
+            ".embla__button--prev": {
+              "vertical-align": "super",
+              "color": "#000",
+              "transition": "color 0.25s ease-out",
+              "&:hover": {
+                "color": "#000"
+              }
+            },
+            ".embla__button--prev svg polygon:nth-of-type(1)": {
+              "-webkit-clip-path": "inset(0 0 0 0)",
+              "clip-path": "inset(0 0 0 0)"
+            },
+            ".embla__button--prev svg polygon:nth-of-type(2)": {
+              "-webkit-clip-path": "inset(0 0 0 100%)",
+              "clip-path": "inset(0 0 0 100%)"
+            },
+            ".embla__button--prev:hover svg polygon:nth-of-type(1)": {
+              "-webkit-clip-path": "inset(0 100% 0 0)",
+              "clip-path": "inset(0 100% 0 0)"
+            },
+            ".embla__button--prev:hover svg polygon:nth-of-type(2)": {
+              "-webkit-clip-path": "inset(0 0 0 0)",
+              "clip-path": "inset(0 0 0 0)",
+              "transition-delay": "0.3s"
+            },
+            ".embla__button--next": {
+              "vertical-align": "sub",
+              "color": "#000",
+              "transition": "color 0.25s ease-out",
+              "&:hover": {
+                "color": "#000"
+              }
+            },
+            ".embla__button--next svg polygon:nth-of-type(1)": {
+              "-webkit-clip-path": "inset(0 0 0 0)",
+              "clip-path": "inset(0 0 0 0)"
+            },
+            ".embla__button--next svg polygon:nth-of-type(2)": {
+              "-webkit-clip-path": "inset(0 100% 0 0)",
+              "clip-path": "inset(0 100% 0 0)"
+            },
+            ".embla__button--next:hover svg polygon:nth-of-type(1)": {
+              "-webkit-clip-path": "inset(0 0 0 100%)",
+              "clip-path": "inset(0 0 0 100%)"
+            },
+            ".embla__button--next:hover svg polygon:nth-of-type(2)": {
+              "-webkit-clip-path": "inset(0 0 0 0)",
+              "clip-path": "inset(0 0 0 0)",
+              "transition-delay": "0.3s"
+            }
           },
+          "_name": "slider1",
+          "_sourceTheme": "impressm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"slider1 mbr-embla\" group=\"Gallery & Slider\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"embla\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\" checked>\n        <input inline type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input inline type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <header>Carousel</header>\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\" checked>\n        <input type=\"range\" title=\"Interval\" name=\"interval\" min=\"1\" max=\"10\" value=\"5\" step=\"1\" condition=\"autoplay\">\n        <input type=\"checkbox\" title=\"Loop\" name=\"loop\" checked>\n        <input type=\"checkbox\" title=\"Draggable\" name=\"draggable\" checked>\n        <header>Card</header>\n        <input type=\"checkbox\" title=\"Card Title\" name=\"showCardTitle\" checked>\n        <input type=\"checkbox\" title=\"Card Subtitle\" name=\"showCardSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Card Text\" name=\"showCardText\" checked>\n        <input type=\"color\" title=\"BG\" name=\"cardBg\" value=\"#ffffff\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n<div class=\"inner-container\">\n        <div class=\"content\">\n\n            <div class=\"embla\" data-loop=\"{{loop}}\" data-auto-play=\"{{autoplay}}\" data-auto-play-interval=\"{{interval}}\" data-draggable=\"{{draggable}}\" data-skip-snaps=\"true\" data-align=\"start\" data-contain-scroll=\"trimSnaps\">\n                <div class=\"text-wrap\">\n                    <div mbr-if=\"showTitle || showSubtitle\">\n                        <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                            SUBTITLE\n                        </h4>\n                        <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                            LOREM IPSUM DOLOR SIT AMET\n                        </h2>\n                    </div>\n                    <div class=\"controls\">\n                        <button class=\"embla__button embla__button--prev\">\n                            <svg xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"47px\" height=\"15px\" viewBox=\"0 0 47 15\" enable-background=\"new 0 0 47 15\" xml:space=\"preserve\">\n                                <g>\n                                    <polygon points=\"1.319,13.477 45.681,13.477 45.681,12.404 4.446,12.404 17.353,2.37 16.694,1.523\"></polygon>\n                                    <polygon points=\"1.319,13.477 45.681,13.477 45.681,12.404 4.446,12.404 17.353,2.37 16.694,1.523\"></polygon>\n                                </g>\n                            </svg>\n                            <span class=\"sr-only visually-hidden visually-hidden\">Previous</span>\n                        </button>\n                        <button class=\"embla__button embla__button--next\">\n                            <svg xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"47px\" height=\"15px\" viewBox=\"0 0 47 15\" enable-background=\"new 0 0 47 15\" xml:space=\"preserve\">\n                                <g>\n                                    <polygon points=\"45.681,1.523 1.319,1.523 1.319,2.596 42.554,2.596 29.647,12.631 30.306,13.477\"></polygon>\n                                    <polygon points=\"45.681,1.523 1.319,1.523 1.319,2.596 42.554,2.596 29.647,12.631 30.306,13.477\"></polygon>\n                                </g>\n                            </svg>\n                            <span class=\"sr-only visually-hidden visually-hidden\">Next</span>\n                        </button>\n                    </div>\n                </div>\n                <div class=\"embla__viewport\">\n                    <div class=\"embla__container\">\n                        <div class=\"embla__slide\">\n                            <div class=\"card-wrap\">\n                                <div class=\"image-wrap\">\n                                    <img src=\"../_images/slider/slide1.jpg\">\n                                </div>\n                                <div class=\"content-wrap\">\n                                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\" data-app-selector=\".mbr-card-subtitle\">\n                                        SUBTITLE\n                                    </h5>\n                                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">\n                                        LOREM IPSUM DOLOR SIT AMET\n                                    </h3>\n                                    <p class=\"mbr-card-text mbr-fonts-style\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n                                        By John Smith\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"embla__slide\">\n                            <div class=\"card-wrap\">\n                                <div class=\"image-wrap\">\n                                    <img src=\"../_images/slider/slide2.jpg\">\n                                </div>\n                                <div class=\"content-wrap\">\n                                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\" data-app-selector=\".mbr-card-subtitle\">\n                                        SUBTITLE\n                                    </h5>\n                                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">\n                                        NEW DAY BRINGS NEW STRENGTH\n                                    </h3>\n                                    <p class=\"mbr-card-text mbr-fonts-style\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n                                        By John Smith\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"embla__slide\">\n                            <div class=\"card-wrap\">\n                                <div class=\"image-wrap\">\n                                    <img src=\"../_images/slider/slide3.jpg\">\n                                </div>\n                                <div class=\"content-wrap\">\n                                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\" data-app-selector=\".mbr-card-subtitle\">\n                                        SUBTITLE\n                                    </h5>\n                                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">\n                                        LOREM IPSUM DOLOR SIT AMET\n                                    </h3>\n                                    <p class=\"mbr-card-text mbr-fonts-style\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n                                        By John Smith\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"embla__slide\">\n                            <div class=\"card-wrap\">\n                                <div class=\"image-wrap\">\n                                    <img src=\"../_images/slider/slide4.jpg\">\n                                </div>\n                                <div class=\"content-wrap\">\n                                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\" data-app-selector=\".mbr-card-subtitle\">\n                                        SUBTITLE\n                                    </h5>\n                                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">\n                                        LOREM IPSUM DOLOR SIT AMET\n                                    </h3>\n                                    <p class=\"mbr-card-text mbr-fonts-style\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n                                        By John Smith\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"embla__slide\">\n                            <div class=\"card-wrap\">\n                                <div class=\"image-wrap\">\n                                    <img src=\"../_images/slider/slide5.jpg\">\n                                </div>\n                                <div class=\"content-wrap\">\n                                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\" data-app-selector=\".mbr-card-subtitle\">\n                                        SUBTITLE\n                                    </h5>\n                                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">\n                                        LOREM IPSUM DOLOR SIT AMET\n                                    </h3>\n                                    <p class=\"mbr-card-text mbr-fonts-style\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n                                        By John Smith\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"embla__slide\">\n                            <div class=\"card-wrap\">\n                                <div class=\"image-wrap\">\n                                    <img src=\"../_images/slider/slide6.jpg\">\n                                </div>\n                                <div class=\"content-wrap\">\n                                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\" data-app-selector=\".mbr-card-subtitle\">\n                                        SUBTITLE\n                                    </h5>\n                                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">\n                                        NEW DAY BRINGS NEW STRENGTH\n                                    </h3>\n                                    <p class=\"mbr-card-text mbr-fonts-style\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n                                        By John Smith\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"embla__slide\">\n                            <div class=\"card-wrap\">\n                                <div class=\"image-wrap\">\n                                    <img src=\"../_images/slider/slide7.jpg\">\n                                </div>\n                                <div class=\"content-wrap\">\n                                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\" data-app-selector=\".mbr-card-subtitle\">\n                                        SUBTITLE\n                                    </h5>\n                                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">\n                                        LOREM IPSUM DOLOR SIT AMET\n                                    </h3>\n                                    <p class=\"mbr-card-text mbr-fonts-style\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n                                        By John Smith\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"embla__slide\">\n                            <div class=\"card-wrap\">\n                                <div class=\"image-wrap\">\n                                    <img src=\"../_images/slider/slide8.jpg\">\n                                </div>\n                                <div class=\"content-wrap\">\n                                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\" data-app-selector=\".mbr-card-subtitle\">\n                                        SUBTITLE\n                                    </h5>\n                                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">\n                                        LOREM IPSUM DOLOR SIT AMET\n                                    </h3>\n                                    <p class=\"mbr-card-text mbr-fonts-style\" data-app-selector=\".card-text, .mbr-section-btn, .social-row\" mbr-theme-style=\"display-7\" mbr-if=\"showCardText\">\n                                        By John Smith\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "u0imisLzFa",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "slider1-7"
         },
         {
           "_name": "asocial1",
